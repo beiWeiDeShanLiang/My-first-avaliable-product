@@ -1,0 +1,27 @@
+spring:
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+  redis:
+    host: 47.100.98.133
+    port: 6379
+    password: 123456
+  datasource:
+    hikari:
+      minimum-idle: 3
+      maximum-pool-size: 10
+      max-lifetime: 30000   #不能小于30秒，否则默认回到1800秒
+      connection-test-query: SELECT 1
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: "jdbc:mysql://47.100.98.133:3306/huihui1?useUnicode=true"
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
+server:
+  port: 8083
+file:
+  upload:
+    dir: F:\上传位置中文版\
+    ip: 127.0.0.1
